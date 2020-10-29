@@ -26,7 +26,7 @@ export default class App extends Component<Props> {
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.title}>Example app react-native-push-notification</Text>
+        <Text style={styles.title}>Example app rn-push-android</Text>
         <View style={styles.spacer}></View>
         <TextInput style={styles.textField} value={this.state.registerToken} placeholder="Register token" />
         <View style={styles.spacer}></View>

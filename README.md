@@ -1,7 +1,7 @@
 # React Native Push Notifications
 
-[![npm version](https://badge.fury.io/js/react-native-push-notification.svg?update=9)](http://badge.fury.io/js/react-native-push-notification)
-[![npm downloads](https://img.shields.io/npm/dm/react-native-push-notification.svg?update=9)](http://badge.fury.io/js/react-native-push-notification)
+[![npm version](https://badge.fury.io/js/rn-push-android.svg?update=9)](http://badge.fury.io/js/rn-push-android)
+[![npm downloads](https://img.shields.io/npm/dm/rn-push-android.svg?update=9)](http://badge.fury.io/js/rn-push-android)
 
 React Native Local and Remote Notifications for iOS and Android
 
@@ -9,21 +9,21 @@ React Native Local and Remote Notifications for iOS and Android
 
 | Component Version | RN Versions          | README                                                                                                                 |
 | ----------------- | -------------------- | ---------------------------------------------------------------------------------------------------------------------- |
-| **1.0.7**         | **<= 0.27**          | [Open](https://github.com/zo0r/react-native-push-notification/blob/f42723817f1687e0da23e6753eb8a9f0385b6ac5/README.md) |
-| **1.0.8**         | **0.28**             | [Open](https://github.com/zo0r/react-native-push-notification/blob/2eafd1961273ca6a82ad4dd6514fbf1d1a829089/README.md) |
-| **2.0.1**         | **0.29**             | [Open](https://github.com/zo0r/react-native-push-notification/blob/c7ab7cd84ea19e42047379aefaf568bb16a81936/README.md) |
-| **2.0.2**         | **0.30, 0.31, 0.32** | [Open](https://github.com/zo0r/react-native-push-notification/blob/a0f7d44e904ba0b92933518e5bf6b444f1c90abb/README.md) |
-| **>= 2.1.0**      | **>= 0.33**          | [Open](https://github.com/zo0r/react-native-push-notification/blob/a359e5c00954aa324136eaa9808333d6ca246171/README.md) |
+| **1.0.7**         | **<= 0.27**          | [Open](https://github.com/zo0r/rn-push-android/blob/f42723817f1687e0da23e6753eb8a9f0385b6ac5/README.md) |
+| **1.0.8**         | **0.28**             | [Open](https://github.com/zo0r/rn-push-android/blob/2eafd1961273ca6a82ad4dd6514fbf1d1a829089/README.md) |
+| **2.0.1**         | **0.29**             | [Open](https://github.com/zo0r/rn-push-android/blob/c7ab7cd84ea19e42047379aefaf568bb16a81936/README.md) |
+| **2.0.2**         | **0.30, 0.31, 0.32** | [Open](https://github.com/zo0r/rn-push-android/blob/a0f7d44e904ba0b92933518e5bf6b444f1c90abb/README.md) |
+| **>= 2.1.0**      | **>= 0.33**          | [Open](https://github.com/zo0r/rn-push-android/blob/a359e5c00954aa324136eaa9808333d6ca246171/README.md) |
 
 ## Changelog
 
-Changelog is available from version 3.1.3 here: [Changelog](https://github.com/zo0r/react-native-push-notification/blob/master/CHANGELOG.md)
+Changelog is available from version 3.1.3 here: [Changelog](https://github.com/zo0r/rn-push-android/blob/master/CHANGELOG.md)
 
 ## Installation
 
-`npm install --save react-native-push-notification` or `yarn add react-native-push-notification`
+`npm install --save rn-push-android` or `yarn add rn-push-android`
 
-`react-native link react-native-push-notification`
+`react-native link rn-push-android`
 
 **NOTE: For Android, you will still have to manually update the AndroidManifest.xml (as below) in order to use Scheduled Notifications.**
 
@@ -39,7 +39,7 @@ Having a problem? Read the [troubleshooting](./trouble-shooting.md) guide before
 
 The component uses PushNotificationIOS for the iOS part.
 
-[Please see: PushNotificationIOS](https://github.com/react-native-community/react-native-push-notification-ios)
+[Please see: PushNotificationIOS](https://github.com/react-native-community/rn-push-android-ios)
 
 ## Android manual Installation
 
@@ -132,8 +132,8 @@ In `android/settings.gradle`
 
 ```gradle
 ...
-include ':react-native-push-notification'
-project(':react-native-push-notification').projectDir = file('../node_modules/react-native-push-notification/android')
+include ':rn-push-android'
+project(':rn-push-android').projectDir = file('../node_modules/rn-push-android/android')
 ```
 
 In `android/app/src/res/values/colors.xml` (Create the file if it doesn't exist).
@@ -174,7 +174,7 @@ public class MainApplication extends Application implements ReactApplication {
 ## Usage
 
 ```javascript
-var PushNotification = require("react-native-push-notification");
+var PushNotification = require("rn-push-android");
 
 PushNotification.configure({
   // (optional) Called when Token is generated (iOS and Android)
@@ -188,7 +188,7 @@ PushNotification.configure({
 
     // process the notification
 
-    // required on iOS only (see fetchCompletionHandler docs: https://github.com/react-native-community/react-native-push-notification-ios)
+    // required on iOS only (see fetchCompletionHandler docs: https://github.com/react-native-community/rn-push-android-ios)
     notification.finish(PushNotificationIOS.FetchResult.NoData);
   },
 
@@ -393,7 +393,7 @@ Property `repeatType` could be one of `month`, `week`, `day`, `hour`, `minute`, 
 
 ## Notification Actions
 
-(Android only) [Refer](https://github.com/zo0r/react-native-push-notification/issues/151) to this issue to see an example of a notification action.
+(Android only) [Refer](https://github.com/zo0r/rn-push-android/issues/151) to this issue to see an example of a notification action.
 
 Two things are required to setup notification actions.
 
@@ -410,7 +410,7 @@ The array itself is specified in string format to circumvent some problems becau
 For each action specified in the `actions` field, we need to add a handler that is called when the user clicks on the action. This can be done in the `componentWillMount` of your main app file or in a separate file which is imported in your main app file. Notification actions handlers can be configured as below:
 
 ```
-import PushNotificationAndroid from 'react-native-push-notification'
+import PushNotificationAndroid from 'rn-push-android'
 
 (function() {
   // Register all the valid actions for notifications here and add the action handler for each action

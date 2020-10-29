@@ -1,4 +1,4 @@
-import PushNotification from 'react-native-push-notification';
+import PushNotification from 'rn-push-android';
 
 export default class NotifService {
 

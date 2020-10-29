@@ -1,5 +1,5 @@
 {
-  "name": "react-native-push-notification",
+  "name": "rn-push-android",
   "version": "3.1.9",
   "description": "React Native Local and Remote Notifications",
   "main": "index",
@@ -17,11 +17,11 @@
     "gcm"
   ],
   "bugs": {
-    "url": "https://github.com/zo0r/react-native-push-notification/issues"
+    "url": "https://github.com/zo0r/rn-push-android/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com:zo0r/react-native-push-notification.git"
+    "url": "https://github.com/Gustavo-Kuze/rn-push-android.git"
   },
   "dependencies": {
     "@react-native-community/push-notification-ios": "^1.0.1"
@@ -30,5 +30,6 @@
     "react-native": ">=0.33"
   },
   "author": "zo0r <http://zo0r.me>",
+  "contributors": ["Gustavo Kuze da Silva <gustavoksilva@gmail.com>"],
   "license": "MIT"
 }

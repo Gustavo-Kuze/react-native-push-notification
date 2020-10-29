@@ -4,9 +4,9 @@ Before submitting an issue please take a moment to read though the following. Mo
 
 Known bugs and issues:
 
- * (Android) Tapping an alert in the notification centre will sometimes not result in `onNotification` being called [issue 281](https://github.com/zo0r/react-native-push-notification/issues/281)
+ * (Android) Tapping an alert in the notification centre will sometimes not result in `onNotification` being called [issue 281](https://github.com/zo0r/rn-push-android/issues/281)
  * (Android) Not all local notification features are supported yet (PRs welcome)
- * (iOS) The OS can penalise your app for not calling the completion handler and will stop (or delay) sending notifications to your app. This will be supported from RN-0.38 [PR 227](https://github.com/zo0r/react-native-push-notification/pull/277)
+ * (iOS) The OS can penalise your app for not calling the completion handler and will stop (or delay) sending notifications to your app. This will be supported from RN-0.38 [PR 227](https://github.com/zo0r/rn-push-android/pull/277)
  
 # Android tips
 
