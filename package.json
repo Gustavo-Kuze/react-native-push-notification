@@ -1,6 +1,6 @@
 {
   "name": "rn-push-android",
-  "version": "3.1.9",
+  "version": "3.1.10",
   "description": "React Native Local and Remote Notifications",
   "main": "index",
   "scripts": {
@@ -24,12 +24,14 @@
     "url": "https://github.com/Gustavo-Kuze/rn-push-android.git"
   },
   "dependencies": {
-    "@react-native-community/push-notification-ios": "^1.0.1"
+    "rn-push-ios": "^1.0.4"
   },
   "peerDependencies": {
     "react-native": ">=0.33"
   },
   "author": "zo0r <http://zo0r.me>",
-  "contributors": ["Gustavo Kuze da Silva <gustavoksilva@gmail.com>"],
+  "contributors": [
+    "Gustavo Kuze da Silva <gustavoksilva@gmail.com>"
+  ],
   "license": "MIT"
 }
